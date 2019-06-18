@@ -40,7 +40,7 @@ public class FormBruno extends javax.swing.JFrame {
         initComponents();
         this.setIconImage(new javax.swing.ImageIcon(getClass().getResource("/imagens/Logo_login.png")).getImage());
         conex.conexao();
-        preencherTabela("select *from bruno order by cod_c asc");
+        preencherTabela("select *from alan order by cod_c asc");
         jLabelUsuario.setText(usuario);
         Calendar data = Calendar.getInstance();  // instacis da calendario
         Date d = data.getTime();
@@ -51,6 +51,8 @@ public class FormBruno extends javax.swing.JFrame {
         Hora mostra_hora = new Hora();  // a linha baixo exive a hora atual no sismtea
         mostra_hora.ler_hora();
         timer1.start();
+        jTextFieldDataEmail.setEnabled(false);
+
     }
 
     private FormBruno() {
@@ -146,6 +148,7 @@ public class FormBruno extends javax.swing.JFrame {
     private void initComponents() {
 
         timer1 = new org.netbeans.examples.lib.timerbean.Timer();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jTextFieldNumChamado = new javax.swing.JTextField();
         jTextFieldGrupoSolucionador = new javax.swing.JTextField();
@@ -199,6 +202,8 @@ public class FormBruno extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabelUsuario = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
         jLabel12 = new javax.swing.JLabel();
         jLabelData = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -213,7 +218,7 @@ public class FormBruno extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        setTitle("Gerênciamento de chamados - Eduardo");
+        setTitle("Service Desk Manager");
         setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(248, 248, 248));
@@ -333,7 +338,7 @@ public class FormBruno extends javax.swing.JFrame {
 
         jButtonExcluir.setBackground(new java.awt.Color(248, 248, 248));
         jButtonExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/btn-excluir.png"))); // NOI18N
-        jButtonExcluir.setText("Excluir Chamado");
+        jButtonExcluir.setText("Deleta Chamado");
         jButtonExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonExcluirActionPerformed(evt);
@@ -444,6 +449,26 @@ public class FormBruno extends javax.swing.JFrame {
 
         jLabel25.setText("Usuário logado:");
 
+        jRadioButton1.setBackground(new java.awt.Color(248, 248, 248));
+        buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jRadioButton1.setText("attendance");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jRadioButton2.setBackground(new java.awt.Color(248, 248, 248));
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jRadioButton2.setText("email");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -471,7 +496,12 @@ public class FormBruno extends javax.swing.JFrame {
                                         .addComponent(jTextFieldEsc_2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(7, 7, 7)
-                                        .addComponent(jLabel15))))
+                                        .addComponent(jLabel15))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jRadioButton1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jRadioButton2))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jTextFieldNumChamado, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -566,8 +596,8 @@ public class FormBruno extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 406, Short.MAX_VALUE)
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -586,7 +616,9 @@ public class FormBruno extends javax.swing.JFrame {
                                 .addGap(22, 22, 22)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jButtonNovo)
-                                    .addComponent(jLabel18))
+                                    .addComponent(jLabel18)
+                                    .addComponent(jRadioButton1)
+                                    .addComponent(jRadioButton2))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel5)
@@ -669,7 +701,7 @@ public class FormBruno extends javax.swing.JFrame {
         );
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel12.setText("Gerenciamento de Chamado");
+        jLabel12.setText("CALL MANAGEMENT");
         jLabel12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabelData.setText("jLabel19");
@@ -687,7 +719,7 @@ public class FormBruno extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(245, 245, 245));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/kisspng-computer-icons-internally-displaced-person-desloca-walking-5ad993b5142fb6.1075307315242085650827.jpg"))); // NOI18N
-        jButton3.setText("Volta ao Menu Principal");
+        jButton3.setText("Retorna ao Menu Principal");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -712,9 +744,9 @@ public class FormBruno extends javax.swing.JFrame {
                                 .addComponent(jLabel20)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jFormattedTextHora, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(259, 259, 259)
-                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -822,7 +854,7 @@ public class FormBruno extends javax.swing.JFrame {
             jButtonCancelar.setEnabled(false);
             jButtonNovo.setEnabled(true);
             jComboBoxTipoForm.setEnabled(true);
-            preencherTabela("select *from bruno order by cod_c asc");
+            preencherTabela("select *from alan order by cod_c asc");
         } else {
             mod.setCod_c(Integer.parseInt(jtCOD.getText()));
             mod.setNum_c(jTextFieldNumChamado.getText());
@@ -872,7 +904,7 @@ public class FormBruno extends javax.swing.JFrame {
             jButtonSalvar.setEnabled(false);
             jButtonCancelar.setEnabled(false);
             jTextFieldNumChamado.setEnabled(true);
-            preencherTabela("select *from bruno order by cod_c asc");
+            preencherTabela("select *from alan order by cod_c asc");
         }
     }//GEN-LAST:event_jButtonSalvarActionPerformed
 
@@ -894,7 +926,6 @@ public class FormBruno extends javax.swing.JFrame {
         jTextFieldEsc_4.setEnabled(true);
         jTextFieldEsc_5.setEnabled(true);
         jTextFieldData_s.setEnabled(true);
-        jTextFieldDataEmail.setEnabled(true);
 
         jtCOD.setText("");
         jTextFieldNumChamado.setText("");
@@ -916,7 +947,7 @@ public class FormBruno extends javax.swing.JFrame {
         jButtonExcluir.setEnabled(false);
         jButtonPesquisaEsc.setEnabled(false);
         jFormattedDataLigacao.setText(dtHoje.toString());
-        preencherTabela("select *from bruno order by cod_c asc");
+        preencherTabela("select *from alan order by cod_c asc");
     }//GEN-LAST:event_jButtonNovoActionPerformed
 
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
@@ -986,16 +1017,16 @@ public class FormBruno extends javax.swing.JFrame {
         jButtonEditar.setEnabled(true);
         //jButtonExcluir.setEnabled(true);
         if (jTextFieldPesquisaChamado.getText().isEmpty()) {
-            preencherTabela("select *from bruno order by cod_c asc");
+            preencherTabela("select *from alan order by cod_c asc");
         } else {
-            preencherTabela("select *from bruno where num_c  like'%" + mod.getPesquisa() + "%'"); // BUSCA ESPECIFICA
+            preencherTabela("select *from alan where num_c  like'%" + mod.getPesquisa() + "%'"); // BUSCA ESPECIFICA
         }
     }//GEN-LAST:event_jButtonPesquisarActionPerformed
 
     private void jTableChamadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableChamadoMouseClicked
         String cod_c = "" + jTableChamado.getValueAt(jTableChamado.getSelectedRow(), 0);   //o que for selecionado na table
         conex.conexao();
-        conex.executaSql("select *from bruno where cod_c='" + cod_c + "'");
+        conex.executaSql("select *from alan where cod_c='" + cod_c + "'");
         try {
             conex.rs.first();                                                                      // primeiro do banco
             jtCOD.setText(String.valueOf(conex.rs.getInt("cod_c")));
@@ -1026,7 +1057,7 @@ public class FormBruno extends javax.swing.JFrame {
         jButtonExcluir.setEnabled(true);
         jComboBoxTipoForm.setEnabled(true);
         jButtonPesquisaEsc.setEnabled(true);
-        
+
         jTextFieldNumChamado.setEnabled(true);
         jComboBoxTipofer.setEnabled(false);
         jComboBoxTipo.setEnabled(false);
@@ -1040,13 +1071,13 @@ public class FormBruno extends javax.swing.JFrame {
         jTextFieldEsc_3.setEnabled(false);
         jTextFieldEsc_4.setEnabled(false);
         jTextFieldEsc_5.setEnabled(false);
-        jTextFieldData_s.setEnabled(false); 
+        jTextFieldData_s.setEnabled(false);
         jTextFieldDataEmail.setEnabled(false);
-        
+
     }//GEN-LAST:event_jTableChamadoMouseClicked
 
     private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
- jTextFieldNumChamado.setEnabled(true);
+        jTextFieldNumChamado.setEnabled(true);
         jComboBoxTipofer.setEnabled(false);
         jComboBoxTipo.setEnabled(false);
         jComboBoxStatus.setEnabled(false);
@@ -1059,7 +1090,7 @@ public class FormBruno extends javax.swing.JFrame {
         jTextFieldEsc_3.setEnabled(false);
         jTextFieldEsc_4.setEnabled(false);
         jTextFieldEsc_5.setEnabled(false);
-        jTextFieldData_s.setEnabled(false); 
+        jTextFieldData_s.setEnabled(false);
         jTextFieldDataEmail.setEnabled(false);
 
         jtCOD.setText("");
@@ -1128,7 +1159,7 @@ public class FormBruno extends javax.swing.JFrame {
                     jButtonCancelar.setEnabled(false);
                     jButtonEditar.setEnabled(false);
                     jButtonExcluir.setEnabled(false);
-                    preencherTabela("select *from bruno order by cod_c asc");
+                    preencherTabela("select *from alan order by cod_c asc");
                 }
 
             } else {
@@ -1137,7 +1168,6 @@ public class FormBruno extends javax.swing.JFrame {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, "Acesso somente o Titular ou o Administrador, contate o administrador!!\n Erro: " + ex);
         }
-        mod.setCod_c(Integer.parseInt(jtCOD.getText()));
         jtCOD.setText("");
         jTextFieldNumChamado.setText("");
         jTextFieldGrupoSolucionador.setText("");
@@ -1170,7 +1200,7 @@ public class FormBruno extends javax.swing.JFrame {
         jButtonCancelar.setEnabled(false);
         jButtonEditar.setEnabled(false);
         jButtonExcluir.setEnabled(false);
-        preencherTabela("select *from bruno order by cod_c asc");
+        preencherTabela("select *from alan order by cod_c asc");
     }//GEN-LAST:event_jButtonExcluirActionPerformed
 
     private void jComboBoxTipoFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTipoFormActionPerformed
@@ -1227,7 +1257,7 @@ public class FormBruno extends javax.swing.JFrame {
         jButtonEditar.setEnabled(true);
         //jButtonExcluir.setEnabled(true);
         jComboBoxTipoAnalista.setEnabled(true);
-        preencherTabela("select *from bruno where tipofor_c like'%" + mod.getPesquisa() + "%'"); //preencherTabela("select *from bruno order by cod_c asc");
+        preencherTabela("select *from alan where tipofor_c like'%" + mod.getPesquisa() + "%'"); //preencherTabela("select *from alan order by cod_c asc");
     }//GEN-LAST:event_jButtonPesquisaEscActionPerformed
 
     private void timer1OnTime(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timer1OnTime
@@ -1259,6 +1289,7 @@ public class FormBruno extends javax.swing.JFrame {
 
     private void jButtonPesquisaEspActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPesquisaEspActionPerformed
         int op;
+
         op = Integer.parseInt(JOptionPane.showInputDialog(null, "ESCOLHA O METÓDO DE BUSCA:\n\n1 - Pesquisa por Tipo de Ferramenta\n2 - Pesquisa Tipo de Chamado\n3 - Pesquisa por Status de Chamado\n4 - Pesquisa por Grupo Solucionador\n5 - Pesquisa por Data de Ligação\n\n\nDigite a opção: "));
         switch (op) {
             case 1:
@@ -1288,7 +1319,7 @@ public class FormBruno extends javax.swing.JFrame {
                 break;
             default:
                 JOptionPane.showMessageDialog(this, "Nenhuma opção selecionada!");
-                preencherTabela("select *from bruno order by cod_c asc");
+                preencherTabela("select *from alan order by cod_c asc");
                 break;
         }
         BeansBruno model = control.buscaChamado(mod);
@@ -1343,15 +1374,15 @@ public class FormBruno extends javax.swing.JFrame {
         jComboBoxTipoAnalista.setEnabled(true);
 
         if (op == 1) {
-            preencherTabela("select *from bruno where tipofer_c like'%" + mod.getPesquisa() + "%'");
+            preencherTabela("select *from alan where tipofer_c like'%" + mod.getPesquisa() + "%'");
         } else if (op == 2) {
-            preencherTabela("select *from bruno where tipo_c like'%" + mod.getPesquisa() + "%'");
+            preencherTabela("select *from alan where tipo_c like'%" + mod.getPesquisa() + "%'");
         } else if (op == 3) {
-            preencherTabela("select *from bruno where status_c like'%" + mod.getPesquisa() + "%'");
+            preencherTabela("select *from alan where status_c like'%" + mod.getPesquisa() + "%'");
         } else if (op == 4) {
-            preencherTabela("select *from bruno where grupo_c like'%" + mod.getPesquisa() + "%'");
+            preencherTabela("select *from alan where grupo_c like'%" + mod.getPesquisa() + "%'");
         } else if (op == 5) {
-            preencherTabela("select *from bruno where data_l like'%" + mod.getPesquisa() + "%'");
+            preencherTabela("select *from alan where data_l like'%" + mod.getPesquisa() + "%'");
         }
     }//GEN-LAST:event_jButtonPesquisaEspActionPerformed
 
@@ -1383,6 +1414,14 @@ public class FormBruno extends javax.swing.JFrame {
             dispose();
         }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        jTextFieldDataEmail.setEnabled(false);
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        jTextFieldDataEmail.setEnabled(true);
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1414,6 +1453,7 @@ public class FormBruno extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -1459,6 +1499,8 @@ public class FormBruno extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelData;
     private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableChamado;
     private javax.swing.JTextField jTextFieldDataEmail;

@@ -485,7 +485,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel13.setText("jLabel13");
         jPanelServiceDesk.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, -190, 1030, -1));
 
-        jTabbedPane1.addTab("Service Desk", jPanelServiceDesk);
+        jTabbedPane1.addTab(" Service Desk Manager", jPanelServiceDesk);
 
         jPanelEstatistica.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanelEstatistica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1022,7 +1022,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel44.setText("jLabel44");
         jPanelEstatistica.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, -1, -1));
 
-        jTabbedPane1.addTab("Estatistica", jPanelEstatistica);
+        jTabbedPane1.addTab("Statistic", jPanelEstatistica);
 
         jPanelEscalonamento.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanelEscalonamento.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1118,7 +1118,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel24.setText("jLabel13");
         jPanelEscalonamento.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, -190, 1030, -1));
 
-        jTabbedPane1.addTab("Escalonamento NET", jPanelEscalonamento);
+        jTabbedPane1.addTab("NET Scheduling ", jPanelEscalonamento);
 
         jPanelEscalonamento1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanelEscalonamento1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
