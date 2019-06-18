@@ -1320,6 +1320,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuItem12.setBackground(new java.awt.Color(255, 255, 255));
         jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/arquivo-menu-2.png"))); // NOI18N
         jMenuItem12.setText("Relatório Analista NET");
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem12);
 
         jMenuBar1.add(jMenu2);
@@ -1444,16 +1449,36 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItemRelGerlaineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemRelGerlaineActionPerformed
 
-        conecta.conexao();
+           conecta.conexao();
         Connection con = ConexaoBD.con;
-        try {
-            //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
-            JasperPrint print = JasperFillManager.fillReport("//NSAODT5NWZFM2/c$/RelMoni/Gerlaine/RelGerlaine.jasper", null, con);    //hotname da maquina 
+        int resposta = 0;
 
-            JasperViewer.viewReport(print, false);
-        } catch (JRException ex) {
-            JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+        UIManager.put("OptionPane.yesButtonText", "Relatório por Data");
+        UIManager.put("OptionPane.noButtonText", "Relatório Total");
+        resposta = JOptionPane.showConfirmDialog(null, "Qual forma deseja Imprimir o relatório:");
+
+        if (resposta == JOptionPane.YES_OPTION) {
+            // PASSAGEM COM PARAMETRO;
+            try {
+                HashMap params = new HashMap<>();
+                params.put("data_esc", new String(JOptionPane.showInputDialog("Digite a data: ")));
+
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Gerlaine/RelGerlaineData.jasper", params, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório por data" + ex);
+            }
+
+        } else if (resposta == JOptionPane.NO_OPTION) {
+            try {
+                //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Gerlaine/RelGerlaine.jasper", null, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+            }
         }
+
     }//GEN-LAST:event_jMenuItemRelGerlaineActionPerformed
 
     private void jMenuItemEnfermeira2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEnfermeira2ActionPerformed
@@ -1471,99 +1496,259 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_timer1OnTime
 
     private void jMenuItemEnfermeira3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEnfermeira3ActionPerformed
-        conecta.conexao();
+         conecta.conexao();
         Connection con = ConexaoBD.con;
-        try {
-            //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
-            JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Danileia/RelDanileia.jasper", null, con);    //hotname da maquina 
-            JasperViewer.viewReport(print, false);
-        } catch (JRException ex) {
-            JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+        int resposta = 0;
+
+        UIManager.put("OptionPane.yesButtonText", "Relatório por Data");
+        UIManager.put("OptionPane.noButtonText", "Relatório Total");
+        resposta = JOptionPane.showConfirmDialog(null, "Qual forma deseja Imprimir o relatório:");
+
+        if (resposta == JOptionPane.YES_OPTION) {
+            // PASSAGEM COM PARAMETRO;
+            try {
+                HashMap params = new HashMap<>();
+                params.put("data_esc", new String(JOptionPane.showInputDialog("Digite a data: ")));
+
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Danileia/RelDanileiaData.jasper", params, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório por data" + ex);
+            }
+
+        } else if (resposta == JOptionPane.NO_OPTION) {
+            try {
+                //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Danileia/RelDanileia.jasper", null, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+            }
         }
 
     }//GEN-LAST:event_jMenuItemEnfermeira3ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        conecta.conexao();
+   conecta.conexao();
         Connection con = ConexaoBD.con;
-        try {
-            //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
-            JasperPrint print = JasperFillManager.fillReport("//NSAODT5NXRFM2/c$/RelMoni/Bruno/RelBruno.jasper", null, con);    //hotname da maquina 
-            JasperViewer.viewReport(print, false);
-        } catch (JRException ex) {
-            JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+        int resposta = 0;
+
+        UIManager.put("OptionPane.yesButtonText", "Relatório por Data");
+        UIManager.put("OptionPane.noButtonText", "Relatório Total");
+        resposta = JOptionPane.showConfirmDialog(null, "Qual forma deseja Imprimir o relatório:");
+
+        if (resposta == JOptionPane.YES_OPTION) {
+            // PASSAGEM COM PARAMETRO;
+            try {
+                HashMap params = new HashMap<>();
+                params.put("data_esc", new String(JOptionPane.showInputDialog("Digite a data: ")));
+
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Bruno/RelBrunoData.jasper", params, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório por data" + ex);
+            }
+
+        } else if (resposta == JOptionPane.NO_OPTION) {
+            try {
+                //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Bruno/RelBruno.jasper", null, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+            }
         }
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        conecta.conexao();
+ conecta.conexao();
         Connection con = ConexaoBD.con;
-        try {
-            //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
-            JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Denise/RelDenise.jasper", null, con);    //hotname da maquina 
-            JasperViewer.viewReport(print, false);
-        } catch (JRException ex) {
-            JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+        int resposta = 0;
+
+        UIManager.put("OptionPane.yesButtonText", "Relatório por Data");
+        UIManager.put("OptionPane.noButtonText", "Relatório Total");
+        resposta = JOptionPane.showConfirmDialog(null, "Qual forma deseja Imprimir o relatório:");
+
+        if (resposta == JOptionPane.YES_OPTION) {
+            // PASSAGEM COM PARAMETRO;
+            try {
+                HashMap params = new HashMap<>();
+                params.put("data_esc", new String(JOptionPane.showInputDialog("Digite a data: ")));
+
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Denise/RelDeniseData.jasper", params, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório por data" + ex);
+            }
+
+        } else if (resposta == JOptionPane.NO_OPTION) {
+            try {
+                //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Denise/RelDenise.jasper", null, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+            }
         }
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        conecta.conexao();
+      conecta.conexao();
         Connection con = ConexaoBD.con;
-        try {
-            //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
-            JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Guilherme/RelGuilherme.jasper", null, con);    //hotname da maquina 
-            JasperViewer.viewReport(print, false);
-        } catch (JRException ex) {
-            JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+        int resposta = 0;
+
+        UIManager.put("OptionPane.yesButtonText", "Relatório por Data");
+        UIManager.put("OptionPane.noButtonText", "Relatório Total");
+        resposta = JOptionPane.showConfirmDialog(null, "Qual forma deseja Imprimir o relatório:");
+
+        if (resposta == JOptionPane.YES_OPTION) {
+            // PASSAGEM COM PARAMETRO;
+            try {
+                HashMap params = new HashMap<>();
+                params.put("data_esc", new String(JOptionPane.showInputDialog("Digite a data: ")));
+
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Guilherme/RelGuilhermeData.jasper", params, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório por data" + ex);
+            }
+
+        } else if (resposta == JOptionPane.NO_OPTION) {
+            try {
+                //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Guilherme/RelGuilherme.jasper", null, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+            }
         }
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        conecta.conexao();
+       conecta.conexao();
         Connection con = ConexaoBD.con;
-        try {
-            //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
-            JasperPrint print = JasperFillManager.fillReport("//NSAODT5NOYFM2/c$/RelMoni/Gleicy/RelGleicy.jasper", null, con);    //hotname da maquina 
-            JasperViewer.viewReport(print, false);
-        } catch (JRException ex) {
-            JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+        int resposta = 0;
+
+        UIManager.put("OptionPane.yesButtonText", "Relatório por Data");
+        UIManager.put("OptionPane.noButtonText", "Relatório Total");
+        resposta = JOptionPane.showConfirmDialog(null, "Qual forma deseja Imprimir o relatório:");
+
+        if (resposta == JOptionPane.YES_OPTION) {
+            // PASSAGEM COM PARAMETRO;
+            try {
+                HashMap params = new HashMap<>();
+                params.put("data_esc", new String(JOptionPane.showInputDialog("Digite a data: ")));
+
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Gleicy/RelGleicyData.jasper", params, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório por data" + ex);
+            }
+
+        } else if (resposta == JOptionPane.NO_OPTION) {
+            try {
+                //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Gleicy/RelGleicy.jasper", null, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+            }
         }
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        conecta.conexao();
+       conecta.conexao();
         Connection con = ConexaoBD.con;
-        try {
-            //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
-            JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Alan/RelAlan.jasper", null, con);    //hotname da maquina 
-            JasperViewer.viewReport(print, false);
-        } catch (JRException ex) {
-            JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+        int resposta = 0;
+
+        UIManager.put("OptionPane.yesButtonText", "Relatório por Data");
+        UIManager.put("OptionPane.noButtonText", "Relatório Total");
+        resposta = JOptionPane.showConfirmDialog(null, "Qual forma deseja Imprimir o relatório:");
+
+        if (resposta == JOptionPane.YES_OPTION) {
+            // PASSAGEM COM PARAMETRO;
+            try {
+                HashMap params = new HashMap<>();
+                params.put("data_esc", new String(JOptionPane.showInputDialog("Digite a data: ")));
+
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Alan/RelAlanData.jasper", params, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório por data" + ex);
+            }
+
+        } else if (resposta == JOptionPane.NO_OPTION) {
+            try {
+                //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Alan/RelAlan.jasper", null, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+            }
         }
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         conecta.conexao();
         Connection con = ConexaoBD.con;
-        try {
-            //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
-            JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Monique/RelMonique.jasper", null, con);    //hotname da maquina 
-            JasperViewer.viewReport(print, false);
-        } catch (JRException ex) {
-            JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+        int resposta = 0;
+
+        UIManager.put("OptionPane.yesButtonText", "Relatório por Data");
+        UIManager.put("OptionPane.noButtonText", "Relatório Total");
+        resposta = JOptionPane.showConfirmDialog(null, "Qual forma deseja Imprimir o relatório:");
+
+        if (resposta == JOptionPane.YES_OPTION) {
+            // PASSAGEM COM PARAMETRO;
+            try {
+                HashMap params = new HashMap<>();
+                params.put("data_esc", new String(JOptionPane.showInputDialog("Digite a data: ")));
+
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Monique/RelMoniqueData.jasper", params, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório por data" + ex);
+            }
+
+        } else if (resposta == JOptionPane.NO_OPTION) {
+            try {
+                //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Monique/RelMonique.jasper", null, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+            }
         }
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        conecta.conexao();
+         conecta.conexao();
         Connection con = ConexaoBD.con;
-        try {
-            //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
-            JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Johnata/RelJohnata.jasper", null, con);    //hotname da maquina 
-            JasperViewer.viewReport(print, false);
-        } catch (JRException ex) {
-            JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+        int resposta = 0;
+
+        UIManager.put("OptionPane.yesButtonText", "Relatório por Data");
+        UIManager.put("OptionPane.noButtonText", "Relatório Total");
+        resposta = JOptionPane.showConfirmDialog(null, "Qual forma deseja Imprimir o relatório:");
+
+        if (resposta == JOptionPane.YES_OPTION) {
+            // PASSAGEM COM PARAMETRO;
+            try {
+                HashMap params = new HashMap<>();
+                params.put("data_esc", new String(JOptionPane.showInputDialog("Digite a data: ")));
+
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Johnata/RelJohnataData.jasper", params, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório por data" + ex);
+            }
+
+        } else if (resposta == JOptionPane.NO_OPTION) {
+            try {
+                //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Johnata/RelJohnata.jasper", null, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+            }
         }
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
@@ -1602,12 +1787,32 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         conecta.conexao();
         Connection con = ConexaoBD.con;
-        try {
-            //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
-            JasperPrint print = JasperFillManager.fillReport("//nsaodt5nnsfm2/c$/RelMoni/Edson/RelEdson.jasper", null, con);    //hotname da maquina 
-            JasperViewer.viewReport(print, false);
-        } catch (JRException ex) {
-            JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+        int resposta = 0;
+
+        UIManager.put("OptionPane.yesButtonText", "Relatório por Data");
+        UIManager.put("OptionPane.noButtonText", "Relatório Total");
+        resposta = JOptionPane.showConfirmDialog(null, "Qual forma deseja Imprimir o relatório:");
+
+        if (resposta == JOptionPane.YES_OPTION) {
+            // PASSAGEM COM PARAMETRO;
+            try {
+                HashMap params = new HashMap<>();
+                params.put("data_esc", new String(JOptionPane.showInputDialog("Digite a data: ")));
+
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Edson/RelEdsonData.jasper", params, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório por data" + ex);
+            }
+
+        } else if (resposta == JOptionPane.NO_OPTION) {
+            try {
+                //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Edson/RelEdson.jasper", null, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+            }
         }
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
@@ -2624,6 +2829,38 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         JOptionPane.showMessageDialog(null, "Comunicado enviado com sucesso..");
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+      conecta.conexao();
+        Connection con = ConexaoBD.con;
+        int resposta = 0;
+
+        UIManager.put("OptionPane.yesButtonText", "Relatório por Data");
+        UIManager.put("OptionPane.noButtonText", "Relatório Total");
+        resposta = JOptionPane.showConfirmDialog(null, "Qual forma deseja Imprimir o relatório:");
+
+        if (resposta == JOptionPane.YES_OPTION) {
+            // PASSAGEM COM PARAMETRO;
+            try {
+                HashMap params = new HashMap<>();
+                params.put("data_esc", new String(JOptionPane.showInputDialog("Digite a data: ")));
+
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Novo/RelNovoData.jasper", params, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório por data" + ex);
+            }
+
+        } else if (resposta == JOptionPane.NO_OPTION) {
+            try {
+                //JasperPrint print = JasperFillManager.fillReport("//10.70.132.45/c$/Users/t7240049/Documents/NetBeansProjects/MonitoriaProject/Rel/Gerlaine/RelGerlaine.jasper",null,con);     // ip na rede         
+                JasperPrint print = JasperFillManager.fillReport("//nsaodt5nxtfm2/c$/RelMoni/Novo/RelNovo.jasper", null, con);    //hotname da maquina 
+                JasperViewer.viewReport(print, false);
+            } catch (JRException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Erro ao gerar relatório" + ex);
+            }
+        }
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     /**
      * @param args the command line arguments
