@@ -60,13 +60,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         timer1 = new org.netbeans.examples.lib.timerbean.Timer();
         buttonGroup1 = new javax.swing.ButtonGroup();
         jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabelUsuario = new javax.swing.JLabel();
         jLabelData = new javax.swing.JLabel();
         jLabelHora = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanelServiceDesk = new javax.swing.JPanel();
+        jLabelUsuario = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -84,6 +84,29 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jButtonEdson = new javax.swing.JButton();
         jButtonJohnata1 = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
+        jPanelEscalonamento = new javax.swing.JPanel();
+        jButton4 = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jRadioButtonIncidente = new javax.swing.JRadioButton();
+        jRadioButtonSolicitacao = new javax.swing.JRadioButton();
+        jTextFieldEsc_1 = new javax.swing.JTextField();
+        jTextFieldEsc_2 = new javax.swing.JTextField();
+        jTextFieldEsc_3 = new javax.swing.JTextField();
+        jTextFieldEsc_4 = new javax.swing.JTextField();
+        jTextFieldEsc_5 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jTextFieldEsc_6 = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        jTextFieldComen = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jButtonBuscar = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jTextFieldGrupo = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
         jPanelEstatistica = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jLabel32 = new javax.swing.JLabel();
@@ -138,7 +161,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel76 = new javax.swing.JLabel();
         jLabel77 = new javax.swing.JLabel();
         jLabel58 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
         jPanel18 = new javax.swing.JPanel();
         jLabel80 = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
@@ -149,6 +171,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel67 = new javax.swing.JLabel();
+        jLabel71 = new javax.swing.JLabel();
         jButtonAtualizarDados = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
@@ -157,30 +182,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
-        jPanelEscalonamento = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jRadioButtonIncidente = new javax.swing.JRadioButton();
-        jRadioButtonSolicitacao = new javax.swing.JRadioButton();
-        jTextFieldEsc_1 = new javax.swing.JTextField();
-        jTextFieldEsc_2 = new javax.swing.JTextField();
-        jTextFieldEsc_3 = new javax.swing.JTextField();
-        jTextFieldEsc_4 = new javax.swing.JTextField();
-        jTextFieldEsc_5 = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jTextFieldEsc_6 = new javax.swing.JTextField();
-        jLabel22 = new javax.swing.JLabel();
-        jTextFieldComen = new javax.swing.JTextField();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jButtonBuscar = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jTextFieldGrupo = new javax.swing.JTextField();
-        jLabel24 = new javax.swing.JLabel();
-        jPanelEscalonamento1 = new javax.swing.JPanel();
+        jPanelCommunicated = new javax.swing.JPanel();
         jTextArea1 = new javax.swing.JTextArea();
         jButton3 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
@@ -189,9 +191,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel30 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
+        jLabel72 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuCadastro = new javax.swing.JMenu();
         jMenuItemUsuarios = new javax.swing.JMenuItem();
+        jMenuItem13 = new javax.swing.JMenuItem();
+        jMenuItemSair1 = new javax.swing.JMenuItem();
         jMenuFerramentas = new javax.swing.JMenu();
         jMenuItemTelaBenvindo = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
@@ -232,11 +237,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Usuário: ");
-
-        jLabelUsuario.setText("jLabel3");
-
         jLabelData.setText("##/");
 
         jLabelHora.setText("Horário de brasilia");
@@ -249,16 +249,23 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jPanelServiceDesk.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanelServiceDesk.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabelUsuario.setText("jLabel3");
+        jPanelServiceDesk.add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 80, -1));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setText("Usuário logado: ");
+        jPanelServiceDesk.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 100, -1));
+
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("Gerenciamento Ciclo de Vida");
-        jPanelServiceDesk.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jPanelServiceDesk.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, -1, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/LOGO.png"))); // NOI18N
-        jPanelServiceDesk.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Logo_login.png"))); // NOI18N
+        jPanelServiceDesk.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setText("Analyst Control ");
-        jPanelServiceDesk.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
+        jLabel3.setText("Analyst Control -");
+        jPanelServiceDesk.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 130, -1));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -483,9 +490,111 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/internalframe.png"))); // NOI18N
         jLabel13.setText("jLabel13");
-        jPanelServiceDesk.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, -190, 1030, -1));
+        jPanelServiceDesk.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, -160, 1030, -1));
 
         jTabbedPane1.addTab(" Service Desk Manager", jPanelServiceDesk);
+
+        jPanelEscalonamento.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelEscalonamento.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icon user.png"))); // NOI18N
+        jButton4.setText("Registrar Escalonamento");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanelEscalonamento.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 200, -1));
+
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Logo_login.png"))); // NOI18N
+        jPanelEscalonamento.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel14.setText("Escalonamento NET");
+        jPanelEscalonamento.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, -1, -1));
+
+        jRadioButtonIncidente.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(jRadioButtonIncidente);
+        jRadioButtonIncidente.setText("Incidente");
+        jRadioButtonIncidente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonIncidenteActionPerformed(evt);
+            }
+        });
+        jPanelEscalonamento.add(jRadioButtonIncidente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+
+        jRadioButtonSolicitacao.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(jRadioButtonSolicitacao);
+        jRadioButtonSolicitacao.setText("Solicitação");
+        jRadioButtonSolicitacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonSolicitacaoActionPerformed(evt);
+            }
+        });
+        jPanelEscalonamento.add(jRadioButtonSolicitacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+        jPanelEscalonamento.add(jTextFieldEsc_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 210, -1));
+        jPanelEscalonamento.add(jTextFieldEsc_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 190, 210, -1));
+        jPanelEscalonamento.add(jTextFieldEsc_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 220, 210, -1));
+        jPanelEscalonamento.add(jTextFieldEsc_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 250, 210, -1));
+        jPanelEscalonamento.add(jTextFieldEsc_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 280, 210, -1));
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel12.setText("Nível 5:");
+        jPanelEscalonamento.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 280, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel11.setText("Nível 4:");
+        jPanelEscalonamento.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel10.setText("Nível 3:");
+        jPanelEscalonamento.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, -1, -1));
+
+        jTextFieldEsc_6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldEsc_6ActionPerformed(evt);
+            }
+        });
+        jPanelEscalonamento.add(jTextFieldEsc_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, 210, -1));
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel22.setText("Nível 6:");
+        jPanelEscalonamento.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 310, -1, -1));
+        jPanelEscalonamento.add(jTextFieldComen, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 320, 50));
+
+        jLabel23.setText("Comentário:");
+        jPanelEscalonamento.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel9.setText("Nível 2:");
+        jPanelEscalonamento.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, -1, 20));
+
+        jButtonBuscar.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonBuscar.setText("Buscar");
+        jButtonBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBuscarActionPerformed(evt);
+            }
+        });
+        jPanelEscalonamento.add(jButtonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel8.setText("Nível 1:");
+        jPanelEscalonamento.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, -1, -1));
+
+        jTextFieldGrupo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldGrupoActionPerformed(evt);
+            }
+        });
+        jPanelEscalonamento.add(jTextFieldGrupo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 250, -1));
+
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/internalframe.png"))); // NOI18N
+        jLabel24.setText("jLabel13");
+        jPanelEscalonamento.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, -160, 1030, -1));
+
+        jTabbedPane1.addTab("NET Scheduling ", jPanelEscalonamento);
 
         jPanelEstatistica.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanelEstatistica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -517,7 +626,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanelEstatistica.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 350, 140, 20));
+        jPanelEstatistica.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 140, -1));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -902,15 +1011,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jPanelEstatistica.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 410, 20));
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Mais Detalhes");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanelEstatistica.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 300, -1, -1));
-
         jPanel18.setBackground(new java.awt.Color(255, 255, 255));
         jPanel18.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -988,6 +1088,35 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jPanelEstatistica.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 410, 20));
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel67.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel67.setText("TOTAL DE CHAMADOS:");
+
+        jLabel71.setText("jLabel71");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jLabel67)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel71, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel67)
+                    .addComponent(jLabel71)))
+        );
+
+        jPanelEstatistica.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 310, 20));
+
         jButtonAtualizarDados.setBackground(new java.awt.Color(255, 255, 255));
         jButtonAtualizarDados.setText("Atualizar Dados");
         jButtonAtualizarDados.addActionListener(new java.awt.event.ActionListener() {
@@ -995,7 +1124,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 jButtonAtualizarDadosActionPerformed(evt);
             }
         });
-        jPanelEstatistica.add(jButtonAtualizarDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 130, -1));
+        jPanelEstatistica.add(jButtonAtualizarDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 130, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel5.setText("Registro Total");
@@ -1009,12 +1138,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel26.setText("Registo do Dia");
         jPanelEstatistica.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 120, -1));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/logo_gd-270.png"))); // NOI18N
-        jPanelEstatistica.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 110, -1));
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/LOGO.png"))); // NOI18N
+        jPanelEstatistica.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 220, -1));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/internalframe.png"))); // NOI18N
         jLabel16.setText("jLabel13");
-        jPanelEstatistica.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, -190, 1030, -1));
+        jPanelEstatistica.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, -160, 1030, -1));
 
         jLabel43.setText("jLabel43");
         jPanelEstatistica.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, -1));
@@ -1024,109 +1153,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Statistic", jPanelEstatistica);
 
-        jPanelEscalonamento.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanelEscalonamento.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icon user.png"))); // NOI18N
-        jButton4.setText("Registrar Escalonamento");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanelEscalonamento.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, 200, -1));
-
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/LOGO.png"))); // NOI18N
-        jPanelEscalonamento.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, -1));
-
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel14.setText("Escalonamento NET");
-        jPanelEscalonamento.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, -1, -1));
-
-        jRadioButtonIncidente.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jRadioButtonIncidente);
-        jRadioButtonIncidente.setText("Incidente");
-        jRadioButtonIncidente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonIncidenteActionPerformed(evt);
-            }
-        });
-        jPanelEscalonamento.add(jRadioButtonIncidente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
-
-        jRadioButtonSolicitacao.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jRadioButtonSolicitacao);
-        jRadioButtonSolicitacao.setText("Solicitação");
-        jRadioButtonSolicitacao.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonSolicitacaoActionPerformed(evt);
-            }
-        });
-        jPanelEscalonamento.add(jRadioButtonSolicitacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
-        jPanelEscalonamento.add(jTextFieldEsc_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 220, -1));
-        jPanelEscalonamento.add(jTextFieldEsc_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 220, -1));
-        jPanelEscalonamento.add(jTextFieldEsc_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 220, -1));
-        jPanelEscalonamento.add(jTextFieldEsc_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 220, -1));
-        jPanelEscalonamento.add(jTextFieldEsc_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 220, -1));
-
-        jLabel12.setText("Nível 5:");
-        jPanelEscalonamento.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
-
-        jLabel11.setText("Nível 4:");
-        jPanelEscalonamento.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
-
-        jLabel10.setText("Nível 3:");
-        jPanelEscalonamento.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
-
-        jTextFieldEsc_6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldEsc_6ActionPerformed(evt);
-            }
-        });
-        jPanelEscalonamento.add(jTextFieldEsc_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 210, -1));
-
-        jLabel22.setText("Nível 6:");
-        jPanelEscalonamento.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, -1, -1));
-        jPanelEscalonamento.add(jTextFieldComen, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, 200, 110));
-
-        jLabel23.setText("Comentário:");
-        jPanelEscalonamento.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, -1));
-
-        jLabel9.setText("Nível 2:");
-        jPanelEscalonamento.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
-
-        jButtonBuscar.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonBuscar.setText("Buscar");
-        jButtonBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonBuscarActionPerformed(evt);
-            }
-        });
-        jPanelEscalonamento.add(jButtonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, -1, -1));
-
-        jLabel8.setText("Nível 1:");
-        jPanelEscalonamento.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
-
-        jTextFieldGrupo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldGrupoActionPerformed(evt);
-            }
-        });
-        jPanelEscalonamento.add(jTextFieldGrupo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 250, -1));
-
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/internalframe.png"))); // NOI18N
-        jLabel24.setText("jLabel13");
-        jPanelEscalonamento.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, -190, 1030, -1));
-
-        jTabbedPane1.addTab("NET Scheduling ", jPanelEscalonamento);
-
-        jPanelEscalonamento1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanelEscalonamento1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanelCommunicated.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelCommunicated.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jTextArea1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanelEscalonamento1.add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 410, 80));
+        jPanelCommunicated.add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 230, 80));
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Enviar");
@@ -1135,28 +1168,30 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanelEscalonamento1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, -1, -1));
+        jPanelCommunicated.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, -1, -1));
 
         jTextField1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanelEscalonamento1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 410, -1));
+        jPanelCommunicated.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 210, -1));
 
         jLabel66.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel66.setText("Assunto:");
-        jPanelEscalonamento1.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, -1, -1));
+        jPanelCommunicated.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, -1, 20));
 
         jLabel62.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel62.setText("Messagem:");
-        jPanelEscalonamento1.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
+        jPanelCommunicated.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, -1, -1));
 
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/LOGO.png"))); // NOI18N
-        jPanelEscalonamento1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Logo_login.png"))); // NOI18N
+        jPanelCommunicated.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
 
         jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/internalframe.png"))); // NOI18N
         jLabel51.setText("jLabel13");
-        jPanelEscalonamento1.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, -190, 1030, -1));
-        jPanelEscalonamento1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, -1));
+        jPanelCommunicated.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, -160, 1030, -1));
+        jPanelCommunicated.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, -1));
 
-        jTabbedPane1.addTab("Communicated ", jPanelEscalonamento1);
+        jTabbedPane1.addTab("Communicated ", jPanelCommunicated);
+
+        jLabel72.setText("Copyright © 2019 Monitoria Claro Brasil. Todos os direitos reservados.");
 
         jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1173,6 +1208,32 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenuCadastro.add(jMenuItemUsuarios);
+
+        jMenuItem13.setBackground(new java.awt.Color(255, 255, 255));
+        jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icon benvindo.png"))); // NOI18N
+        jMenuItem13.setText("Sobre");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(jMenuItem13);
+
+        jMenuItemSair1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemSair1.setBackground(new java.awt.Color(255, 255, 255));
+        jMenuItemSair1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/sair-menu-2.png"))); // NOI18N
+        jMenuItemSair1.setText("Sair");
+        jMenuItemSair1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItemSair1MouseClicked(evt);
+            }
+        });
+        jMenuItemSair1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSair1ActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(jMenuItemSair1);
 
         jMenuBar1.add(jMenuCadastro);
 
@@ -1218,6 +1279,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem8);
 
+        jMenuItemRelGerlaine.setBackground(new java.awt.Color(255, 255, 255));
         jMenuItemRelGerlaine.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/arquivo-menu-2.png"))); // NOI18N
         jMenuItemRelGerlaine.setText("Relatório Gerlaine Ferreira");
         jMenuItemRelGerlaine.addActionListener(new java.awt.event.ActionListener() {
@@ -1227,6 +1289,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItemRelGerlaine);
 
+        jMenuItemEnfermeira3.setBackground(new java.awt.Color(255, 255, 255));
         jMenuItemEnfermeira3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/arquivo-menu-2.png"))); // NOI18N
         jMenuItemEnfermeira3.setText("Relatório Daniléia Santiago");
         jMenuItemEnfermeira3.addActionListener(new java.awt.event.ActionListener() {
@@ -1365,41 +1428,36 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 771, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabelUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 226, Short.MAX_VALUE)
+                        .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabelHora)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabelData)
-                        .addContainerGap())))
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton1))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel72)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabelData)
-                        .addComponent(jLabelHora)
-                        .addComponent(jLabel4))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel2)
-                        .addComponent(jLabelUsuario)))
-                .addContainerGap())
+                        .addComponent(jLabel4)
+                        .addComponent(jLabelHora))))
         );
 
         pack();
@@ -2247,6 +2305,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         String data;
         data = String.format("" + dtHoje);
         int cont1 = 0, cont2 = 0, cont3 = 0, cont4 = 0, cont5 = 0, cont6 = 0, cont7 = 0, cont8 = 0, cont9 = 0, cont10 = 0, cont11 = 0, cont12 = 0;
+        int total1 = 0, total2 = 0, total3 = 0, total4 = 0, total5 = 0, total6 = 0, total7 = 0, total8 = 0, total9 = 0, total10 = 0, total11 = 0, total12 = 0;
+         
         // COUNT(*) SQL GERLAINE TOTAL DIA  
         try {
             int gerlaine = 0;
@@ -2271,6 +2331,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                      PreparedStatement ps = cn.prepareStatement("SELECT count(*) as cod_c FROM gerlaine"); ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     gerlaineTol = rs.getInt(WIDTH);
+                    total1 = gerlaineTol;
                 }
             }
             jLabel17.setText(String.valueOf(gerlaineTol));
@@ -2317,6 +2378,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                      PreparedStatement ps = cn.prepareStatement("SELECT count(*) as cod_c FROM danileia"); ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     DanileiaTol = rs.getInt(WIDTH);
+                    total2 = DanileiaTol;
                 }
             }
             jLabel20.setText(String.valueOf(DanileiaTol));
@@ -2362,6 +2424,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                      PreparedStatement ps = cn.prepareStatement("SELECT count(*) as cod_c FROM bruno"); ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     brunoTol = rs.getInt(WIDTH);
+                    total3 = brunoTol;
                 }
             }
             jLabel46.setText(String.valueOf(brunoTol));
@@ -2409,6 +2472,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                      PreparedStatement ps = cn.prepareStatement("SELECT count(*) as cod_c FROM denise"); ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     deniseTol = rs.getInt(WIDTH);
+                    total4 = deniseTol;
                 }
             }
             jLabel18.setText(String.valueOf(deniseTol));
@@ -2455,6 +2519,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                      PreparedStatement ps = cn.prepareStatement("SELECT count(*) as cod_c FROM guilherme"); ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     guilhermeTol = rs.getInt(WIDTH);
+                    total5 = guilhermeTol;
                 }
             }
             jLabel35.setText(String.valueOf(guilhermeTol));
@@ -2501,6 +2566,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                      PreparedStatement ps = cn.prepareStatement("SELECT count(*) as cod_c FROM gleicy"); ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     gleicyTol = rs.getInt(WIDTH);
+                    total6 = gleicyTol;
                 }
             }
             jLabel48.setText(String.valueOf(gleicyTol));
@@ -2547,6 +2613,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                      PreparedStatement ps = cn.prepareStatement("SELECT count(*) as cod_c FROM alan"); ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     alanTol = rs.getInt(WIDTH);
+                    total7 = alanTol;
                 }
             }
             jLabel19.setText(String.valueOf(alanTol));
@@ -2592,6 +2659,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                      PreparedStatement ps = cn.prepareStatement("SELECT count(*) as cod_c FROM monique"); ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     moniqueTol = rs.getInt(WIDTH);
+                    total8 = moniqueTol;
                 }
             }
             jLabel38.setText(String.valueOf(moniqueTol));
@@ -2639,6 +2707,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                      PreparedStatement ps = cn.prepareStatement("SELECT count(*) as cod_c FROM johnata"); ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     johnataTol = rs.getInt(WIDTH);
+                    total9 = johnataTol;
                 }
             }
             jLabel52.setText(String.valueOf(johnataTol));
@@ -2686,6 +2755,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                      PreparedStatement ps = cn.prepareStatement("SELECT count(*) as cod_c FROM edson"); ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     edsonTol = rs.getInt(WIDTH);
+                    total10 = edsonTol;
                 }
             }
             jLabel56.setText(String.valueOf(edsonTol));
@@ -2732,6 +2802,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                      PreparedStatement ps = cn.prepareStatement("SELECT count(*) as cod_c FROM novo"); ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     novoTol = rs.getInt(WIDTH);
+                    total11 = novoTol;
                 }
             }
             jLabel61.setText(String.valueOf(novoTol));
@@ -2778,6 +2849,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                      PreparedStatement ps = cn.prepareStatement("SELECT count(*) as cod_c FROM eduardo"); ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     eduardoTol = rs.getInt(WIDTH);
+                    total12 = eduardoTol;
                 }
             }
             jLabel58.setText(String.valueOf(eduardoTol));
@@ -2801,9 +2873,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         }
 
         ///
-        int total;
-        total = cont1 + cont2 + cont3 + cont4 + cont5 + cont6 + cont7 + cont8 + cont9 + cont10 + cont11 + cont12;
-        jLabel33.setText(String.valueOf(total));
+        int totalDia;
+        totalDia = cont1 + cont2 + cont3 + cont4 + cont5 + cont6 + cont7 + cont8 + cont9 + cont10 + cont11 + cont12;
+        jLabel33.setText(String.valueOf(totalDia));
+        
+        double totalChamados;
+        totalChamados = total1 + total2 + total3 + total4 + total5 + total6 + total7 + total8 + total9 + total10 + total11 + total12;
+        jLabel71.setText(String.format("%f",totalChamados));
 
         /*   
         Date d2 = null;
@@ -2821,10 +2897,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
          */
 
     }//GEN-LAST:event_jButtonAtualizarDadosActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         JOptionPane.showMessageDialog(null, "Comunicado enviado com sucesso..");
@@ -2862,6 +2934,21 @@ public class TelaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
+    private void jMenuItemSair1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemSair1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemSair1MouseClicked
+
+    private void jMenuItemSair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSair1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemSair1ActionPerformed
+
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        /* JOptionPane.showMessageDialog(null, "Oi vocês pensaram que se livraram de mim, não\n"
+                + " Gostaria de agradecer a todos, por tudo"
+                + "Pelos compartilhamentos e risadas\n Somos aquilo que pensamos,  "
+                + "Levamos pedacinho de imagens, para nos lembramos quem somos e quem nós deveriamos ver."); */  
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2874,7 +2961,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButtonAlan;
@@ -2954,10 +3040,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
@@ -2979,6 +3068,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
@@ -2991,6 +3081,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemEnfermeira3;
     private javax.swing.JMenuItem jMenuItemRelGerlaine;
     private javax.swing.JMenuItem jMenuItemSair;
+    private javax.swing.JMenuItem jMenuItemSair1;
     private javax.swing.JMenuItem jMenuItemTelaBenvindo;
     private javax.swing.JMenuItem jMenuItemUsuarios;
     private javax.swing.JMenu jMenuSair;
@@ -3004,12 +3095,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JPanel jPanelCommunicated;
     private javax.swing.JPanel jPanelEscalonamento;
-    private javax.swing.JPanel jPanelEscalonamento1;
     private javax.swing.JPanel jPanelEstatistica;
     private javax.swing.JPanel jPanelServiceDesk;
     private javax.swing.JRadioButton jRadioButtonIncidente;

@@ -218,7 +218,7 @@ public class FormDenise extends javax.swing.JFrame {
             }
         });
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Service Desk Manager");
         setBackground(new java.awt.Color(255, 255, 255));
 
