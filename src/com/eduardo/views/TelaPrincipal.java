@@ -192,6 +192,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel51 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jLabel72 = new javax.swing.JLabel();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuCadastro = new javax.swing.JMenu();
         jMenuItemUsuarios = new javax.swing.JMenuItem();
@@ -1454,10 +1455,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel72)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabelData)
-                        .addComponent(jLabel4)
-                        .addComponent(jLabelHora))))
+                    .addComponent(jLabelData)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabelHora)))
         );
 
         pack();
@@ -2877,9 +2877,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         totalDia = cont1 + cont2 + cont3 + cont4 + cont5 + cont6 + cont7 + cont8 + cont9 + cont10 + cont11 + cont12;
         jLabel33.setText(String.valueOf(totalDia));
         
-        double totalChamados;
+        float totalChamados;
         totalChamados = total1 + total2 + total3 + total4 + total5 + total6 + total7 + total8 + total9 + total10 + total11 + total12;
-        jLabel71.setText(String.format("%f",totalChamados));
+        jLabel71.setText(String.format("%.0f",totalChamados));
 
         /*   
         Date d2 = null;
@@ -2943,10 +2943,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemSair1ActionPerformed
 
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
-        /* JOptionPane.showMessageDialog(null, "Oi vocês pensaram que se livraram de mim, não\n"
-                + " Gostaria de agradecer a todos, por tudo"
-                + "Pelos compartilhamentos e risadas\n Somos aquilo que pensamos,  "
-                + "Levamos pedacinho de imagens, para nos lembramos quem somos e quem nós deveriamos ver."); */  
+ 
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     /**
@@ -2960,6 +2957,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

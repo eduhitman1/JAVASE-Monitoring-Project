@@ -40,7 +40,7 @@ public class FormBruno extends javax.swing.JFrame {
         initComponents();
         this.setIconImage(new javax.swing.ImageIcon(getClass().getResource("/imagens/Logo_login.png")).getImage());
         conex.conexao();
-        preencherTabela("select *from alan order by cod_c asc");
+        preencherTabela("select *from bruno order by cod_c asc");
         jLabelUsuario.setText(usuario);
         Calendar data = Calendar.getInstance();  // instacis da calendario
         Date d = data.getTime();
@@ -854,7 +854,7 @@ public class FormBruno extends javax.swing.JFrame {
             jButtonCancelar.setEnabled(false);
             jButtonNovo.setEnabled(true);
             jComboBoxTipoForm.setEnabled(true);
-            preencherTabela("select *from alan order by cod_c asc");
+            preencherTabela("select *from bruno order by cod_c asc");
         } else {
             mod.setCod_c(Integer.parseInt(jtCOD.getText()));
             mod.setNum_c(jTextFieldNumChamado.getText());
@@ -904,7 +904,7 @@ public class FormBruno extends javax.swing.JFrame {
             jButtonSalvar.setEnabled(false);
             jButtonCancelar.setEnabled(false);
             jTextFieldNumChamado.setEnabled(true);
-            preencherTabela("select *from alan order by cod_c asc");
+            preencherTabela("select *from bruno order by cod_c asc");
         }
     }//GEN-LAST:event_jButtonSalvarActionPerformed
 
@@ -947,7 +947,7 @@ public class FormBruno extends javax.swing.JFrame {
         jButtonExcluir.setEnabled(false);
         jButtonPesquisaEsc.setEnabled(false);
         jFormattedDataLigacao.setText(dtHoje.toString());
-        preencherTabela("select *from alan order by cod_c asc");
+        preencherTabela("select *from bruno order by cod_c asc");
     }//GEN-LAST:event_jButtonNovoActionPerformed
 
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
@@ -1017,16 +1017,16 @@ public class FormBruno extends javax.swing.JFrame {
         jButtonEditar.setEnabled(true);
         //jButtonExcluir.setEnabled(true);
         if (jTextFieldPesquisaChamado.getText().isEmpty()) {
-            preencherTabela("select *from alan order by cod_c asc");
+            preencherTabela("select *from bruno order by cod_c asc");
         } else {
-            preencherTabela("select *from alan where num_c  like'%" + mod.getPesquisa() + "%'"); // BUSCA ESPECIFICA
+            preencherTabela("select *from bruno where num_c  like'%" + mod.getPesquisa() + "%'"); // BUSCA ESPECIFICA
         }
     }//GEN-LAST:event_jButtonPesquisarActionPerformed
 
     private void jTableChamadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableChamadoMouseClicked
         String cod_c = "" + jTableChamado.getValueAt(jTableChamado.getSelectedRow(), 0);   //o que for selecionado na table
         conex.conexao();
-        conex.executaSql("select *from alan where cod_c='" + cod_c + "'");
+        conex.executaSql("select *from bruno where cod_c='" + cod_c + "'");
         try {
             conex.rs.first();                                                                      // primeiro do banco
             jtCOD.setText(String.valueOf(conex.rs.getInt("cod_c")));
@@ -1159,7 +1159,7 @@ public class FormBruno extends javax.swing.JFrame {
                     jButtonCancelar.setEnabled(false);
                     jButtonEditar.setEnabled(false);
                     jButtonExcluir.setEnabled(false);
-                    preencherTabela("select *from alan order by cod_c asc");
+                    preencherTabela("select *from bruno order by cod_c asc");
                 }
 
             } else {
@@ -1200,7 +1200,7 @@ public class FormBruno extends javax.swing.JFrame {
         jButtonCancelar.setEnabled(false);
         jButtonEditar.setEnabled(false);
         jButtonExcluir.setEnabled(false);
-        preencherTabela("select *from alan order by cod_c asc");
+        preencherTabela("select *from bruno order by cod_c asc");
     }//GEN-LAST:event_jButtonExcluirActionPerformed
 
     private void jComboBoxTipoFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTipoFormActionPerformed
@@ -1257,7 +1257,7 @@ public class FormBruno extends javax.swing.JFrame {
         jButtonEditar.setEnabled(true);
         //jButtonExcluir.setEnabled(true);
         jComboBoxTipoAnalista.setEnabled(true);
-        preencherTabela("select *from alan where tipofor_c like'%" + mod.getPesquisa() + "%'"); //preencherTabela("select *from alan order by cod_c asc");
+        preencherTabela("select *from bruno where tipofor_c like'%" + mod.getPesquisa() + "%'"); //preencherTabela("select *from bruno order by cod_c asc");
     }//GEN-LAST:event_jButtonPesquisaEscActionPerformed
 
     private void timer1OnTime(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timer1OnTime
@@ -1319,7 +1319,7 @@ public class FormBruno extends javax.swing.JFrame {
                 break;
             default:
                 JOptionPane.showMessageDialog(this, "Nenhuma opção selecionada!");
-                preencherTabela("select *from alan order by cod_c asc");
+                preencherTabela("select *from bruno order by cod_c asc");
                 break;
         }
         BeansBruno model = control.buscaChamado(mod);
@@ -1374,15 +1374,15 @@ public class FormBruno extends javax.swing.JFrame {
         jComboBoxTipoAnalista.setEnabled(true);
 
         if (op == 1) {
-            preencherTabela("select *from alan where tipofer_c like'%" + mod.getPesquisa() + "%'");
+            preencherTabela("select *from bruno where tipofer_c like'%" + mod.getPesquisa() + "%'");
         } else if (op == 2) {
-            preencherTabela("select *from alan where tipo_c like'%" + mod.getPesquisa() + "%'");
+            preencherTabela("select *from bruno where tipo_c like'%" + mod.getPesquisa() + "%'");
         } else if (op == 3) {
-            preencherTabela("select *from alan where status_c like'%" + mod.getPesquisa() + "%'");
+            preencherTabela("select *from bruno where status_c like'%" + mod.getPesquisa() + "%'");
         } else if (op == 4) {
-            preencherTabela("select *from alan where grupo_c like'%" + mod.getPesquisa() + "%'");
+            preencherTabela("select *from bruno where grupo_c like'%" + mod.getPesquisa() + "%'");
         } else if (op == 5) {
-            preencherTabela("select *from alan where data_l like'%" + mod.getPesquisa() + "%'");
+            preencherTabela("select *from bruno where data_l like'%" + mod.getPesquisa() + "%'");
         }
     }//GEN-LAST:event_jButtonPesquisaEspActionPerformed
 
