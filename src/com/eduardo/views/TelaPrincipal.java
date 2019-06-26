@@ -1395,6 +1395,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuSair.setText("Logout");
 
+        jMenuItemEnfermeira2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, 0));
         jMenuItemEnfermeira2.setBackground(new java.awt.Color(255, 255, 255));
         jMenuItemEnfermeira2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/kisspng-computer-icons-internally-displaced-person-desloca-walking-5ad993b5142fb6.1075307315242085650827.jpg"))); // NOI18N
         jMenuItemEnfermeira2.setText("Logout");
