@@ -1062,7 +1062,7 @@ public class FormGerlaine extends javax.swing.JFrame {
         jComboBoxTipofer.setEnabled(false);
         jComboBoxTipo.setEnabled(false);
         jComboBoxStatus.setEnabled(false);
-        jComboBoxTipoForm.setEnabled(false);
+        jComboBoxTipoForm.setEnabled(true);
         jTextFieldGrupoSolucionador.setEnabled(false);
         jTextFieldSumario.setEnabled(false);
         jFormattedDataLigacao.setEnabled(false);
