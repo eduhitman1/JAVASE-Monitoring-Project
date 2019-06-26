@@ -1090,6 +1090,7 @@ public class FormEduardo extends javax.swing.JFrame {
         jButtonPesquisaEsc.setEnabled(false);
         jFormattedDataLigacao.setText(dtHoje.toString());
         preencherTabela("select *from eduardo order by cod_c asc");
+        jTextFieldNumChamado.requestFocus();
     }//GEN-LAST:event_jButtonNovoActionPerformed
 
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
