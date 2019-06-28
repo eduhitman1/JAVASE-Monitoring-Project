@@ -790,7 +790,7 @@ public class FormAlan extends javax.swing.JFrame {
 
         jMenuSair1.setText("Atalhos");
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem2.setBackground(new java.awt.Color(245, 245, 245));
         jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/data.png"))); // NOI18N
         jMenuItem2.setText("Pesquisa Especifica");
@@ -801,7 +801,7 @@ public class FormAlan extends javax.swing.JFrame {
         });
         jMenuSair1.add(jMenuItem2);
 
-        jMenuItemEnfermeira3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemEnfermeira3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItemEnfermeira3.setBackground(new java.awt.Color(245, 245, 245));
         jMenuItemEnfermeira3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/btn-novo.png"))); // NOI18N
         jMenuItemEnfermeira3.setText("Novo Chamado");
@@ -823,7 +823,7 @@ public class FormAlan extends javax.swing.JFrame {
         });
         jMenuSair1.add(jMenuItem1);
 
-        jMenuItemSair1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_K, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemSair1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_K, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItemSair1.setBackground(new java.awt.Color(245, 245, 245));
         jMenuItemSair1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancel icon.png"))); // NOI18N
         jMenuItemSair1.setText("Cancelar ação");

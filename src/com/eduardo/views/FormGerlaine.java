@@ -748,11 +748,6 @@ public class FormGerlaine extends javax.swing.JFrame {
         jMenuItem13.setBackground(new java.awt.Color(245, 245, 245));
         jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icon benvindo.png"))); // NOI18N
         jMenuItem13.setText("Sobre");
-        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem13ActionPerformed(evt);
-            }
-        });
         jMenuCadastro.add(jMenuItem13);
 
         jMenuBar1.add(jMenuCadastro);
@@ -763,11 +758,6 @@ public class FormGerlaine extends javax.swing.JFrame {
         jMenuItemTelaBenvindo.setBackground(new java.awt.Color(245, 245, 245));
         jMenuItemTelaBenvindo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/chamado.png"))); // NOI18N
         jMenuItemTelaBenvindo.setText("Bem -vindos: Gerenciamento ");
-        jMenuItemTelaBenvindo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemTelaBenvindoActionPerformed(evt);
-            }
-        });
         jMenuFerramentas.add(jMenuItemTelaBenvindo);
 
         jMenuItem10.setBackground(new java.awt.Color(245, 245, 245));
@@ -778,75 +768,40 @@ public class FormGerlaine extends javax.swing.JFrame {
         jMenuItem11.setBackground(new java.awt.Color(245, 245, 245));
         jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icon user.png"))); // NOI18N
         jMenuItem11.setText("Escalonamento NET");
-        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem11ActionPerformed(evt);
-            }
-        });
         jMenuFerramentas.add(jMenuItem11);
 
         jMenuBar1.add(jMenuFerramentas);
 
         jMenuSair1.setText("Atalhos");
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem2.setBackground(new java.awt.Color(245, 245, 245));
         jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/data.png"))); // NOI18N
         jMenuItem2.setText("Pesquisa Especifica");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
         jMenuSair1.add(jMenuItem2);
 
-        jMenuItemEnfermeira3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemEnfermeira3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItemEnfermeira3.setBackground(new java.awt.Color(245, 245, 245));
         jMenuItemEnfermeira3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/btn-novo.png"))); // NOI18N
         jMenuItemEnfermeira3.setText("Novo Chamado");
-        jMenuItemEnfermeira3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemEnfermeira3ActionPerformed(evt);
-            }
-        });
         jMenuSair1.add(jMenuItemEnfermeira3);
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ENTER, 0));
         jMenuItem1.setBackground(new java.awt.Color(245, 245, 245));
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/btn-salvar.png"))); // NOI18N
         jMenuItem1.setText("Salvar Chamado");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
         jMenuSair1.add(jMenuItem1);
 
-        jMenuItemSair1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_K, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemSair1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_K, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItemSair1.setBackground(new java.awt.Color(245, 245, 245));
         jMenuItemSair1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancel icon.png"))); // NOI18N
         jMenuItemSair1.setText("Cancelar ação");
-        jMenuItemSair1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenuItemSair1MouseClicked(evt);
-            }
-        });
-        jMenuItemSair1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemSair1ActionPerformed(evt);
-            }
-        });
         jMenuSair1.add(jMenuItemSair1);
 
         jMenuItemTelaBenvindo1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, 0));
         jMenuItemTelaBenvindo1.setBackground(new java.awt.Color(245, 245, 245));
         jMenuItemTelaBenvindo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/chamado.png"))); // NOI18N
         jMenuItemTelaBenvindo1.setText("Retorna ao Menu");
-        jMenuItemTelaBenvindo1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemTelaBenvindo1ActionPerformed(evt);
-            }
-        });
         jMenuSair1.add(jMenuItemTelaBenvindo1);
 
         jMenuBar1.add(jMenuSair1);
@@ -857,11 +812,6 @@ public class FormGerlaine extends javax.swing.JFrame {
         jMenuItemEnfermeira2.setBackground(new java.awt.Color(245, 245, 245));
         jMenuItemEnfermeira2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/kisspng-computer-icons-internally-displaced-person-desloca-walking-5ad993b5142fb6.1075307315242085650827.jpg"))); // NOI18N
         jMenuItemEnfermeira2.setText("Logout");
-        jMenuItemEnfermeira2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemEnfermeira2ActionPerformed(evt);
-            }
-        });
         jMenuSair.add(jMenuItemEnfermeira2);
 
         jMenuBar1.add(jMenuSair);
@@ -1565,74 +1515,6 @@ public class FormGerlaine extends javax.swing.JFrame {
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         jTextFieldDataEmail.setEnabled(true);
     }//GEN-LAST:event_jRadioButton2ActionPerformed
-
-    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
-
-    }//GEN-LAST:event_jMenuItem13ActionPerformed
-
-    private void jMenuItemTelaBenvindoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemTelaBenvindoActionPerformed
-        TelaPrincipal tela = new TelaPrincipal(jLabelUsuario.getText());
-        if (tela == null) {
-            tela = new TelaPrincipal(jLabelUsuario.getText());
-            tela.setResizable(false);
-            dispose();
-        } else {
-            tela.setVisible(true);
-            tela.setResizable(false);
-            dispose();
-        }
-    }//GEN-LAST:event_jMenuItemTelaBenvindoActionPerformed
-
-    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        FormAcionamento esc = new FormAcionamento();
-        try {
-            conex.executaSql("select *from usuarios where usu_nome='" + jLabelUsuario.getText() + "'");
-            conex.rs.first();
-            if (conex.rs.getString("usu_tipo").equals("administrador")) {
-                if (esc == null) {
-                    esc = new FormAcionamento();
-                    esc.setResizable(true);
-                } else {
-                    esc.setVisible(true);
-                    esc.setResizable(true);
-                }
-            } else {
-                JOptionPane.showMessageDialog(this, "Acesso somente para o Titular ou Administrador, contate o administrador!");
-            }
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(this, "Acesso somente o Titular ou o Administrador, contate o administrador!!\n Erro: " + ex);
-        }
-    }//GEN-LAST:event_jMenuItem11ActionPerformed
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        jButtonPesquisaEsp.doClick();
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
-    private void jMenuItemEnfermeira3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEnfermeira3ActionPerformed
-        jButtonNovo.doClick();
-    }//GEN-LAST:event_jMenuItemEnfermeira3ActionPerformed
-
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        jButtonSalvar.doClick();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
-    private void jMenuItemSair1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemSair1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemSair1MouseClicked
-
-    private void jMenuItemSair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSair1ActionPerformed
-        jButtonCancelar.doClick();
-    }//GEN-LAST:event_jMenuItemSair1ActionPerformed
-
-    private void jMenuItemTelaBenvindo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemTelaBenvindo1ActionPerformed
-        jButton3.doClick();
-    }//GEN-LAST:event_jMenuItemTelaBenvindo1ActionPerformed
-
-    private void jMenuItemEnfermeira2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEnfermeira2ActionPerformed
-        TelaLogin logout = new TelaLogin();
-        logout.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jMenuItemEnfermeira2ActionPerformed
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
