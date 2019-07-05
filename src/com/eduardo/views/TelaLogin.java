@@ -25,7 +25,7 @@ public class TelaLogin extends javax.swing.JFrame {
         jLabelFundoLogin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Área de acesso");
+        setTitle("Monitoria Claro Brasil");
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -79,17 +79,19 @@ public class TelaLogin extends javax.swing.JFrame {
         getContentPane().add(jButtonAcessar);
         jButtonAcessar.setBounds(300, 240, 70, 20);
 
+        jLabelUsuario.setBackground(new java.awt.Color(0, 0, 0));
         jLabelUsuario.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelUsuario.setText("Usuário:");
+        jLabelUsuario.setText("User Name:");
         getContentPane().add(jLabelUsuario);
-        jLabelUsuario.setBounds(140, 180, 70, 14);
+        jLabelUsuario.setBounds(120, 180, 70, 14);
 
+        jLabelSenha.setBackground(new java.awt.Color(0, 0, 0));
         jLabelSenha.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelSenha.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelSenha.setText("Senha:");
+        jLabelSenha.setText("Password:");
         getContentPane().add(jLabelSenha);
-        jLabelSenha.setBounds(150, 210, 60, 14);
+        jLabelSenha.setBounds(130, 210, 70, 14);
 
         jLabelFundoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/terra.png"))); // NOI18N
         jLabelFundoLogin.setToolTipText("");

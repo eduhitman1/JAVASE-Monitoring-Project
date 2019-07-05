@@ -226,7 +226,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        setTitle("Menu Principal");
+        setTitle("Main Menu ");
         setBackground(new java.awt.Color(255, 255, 255));
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
@@ -357,7 +357,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jButtonAlan.setBackground(new java.awt.Color(255, 255, 255));
         jButtonAlan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icon user.png"))); // NOI18N
-        jButtonAlan.setText("Alan D. S. Oliveira");
+        jButtonAlan.setText("Analista NET 01");
         jButtonAlan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAlanActionPerformed(evt);
@@ -385,7 +385,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jButtonJohnata.setBackground(new java.awt.Color(255, 255, 255));
         jButtonJohnata.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icon user.png"))); // NOI18N
-        jButtonJohnata.setText("Johnata Dias");
+        jButtonJohnata.setText("Analista NET 02");
         jButtonJohnata.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonJohnataActionPerformed(evt);
@@ -423,7 +423,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jButtonJohnata1.setBackground(new java.awt.Color(255, 255, 255));
         jButtonJohnata1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icon user.png"))); // NOI18N
-        jButtonJohnata1.setText("Analista NET");
+        jButtonJohnata1.setText("Analista NET 03");
         jButtonJohnata1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonJohnata1ActionPerformed(evt);
@@ -2191,10 +2191,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         FormAcionamento esc = new FormAcionamento();
-        try {
-            conecta.executaSql("select *from usuarios where usu_nome='" + jLabelUsuario.getText() + "'");
-            conecta.rs.first();
-            if (conecta.rs.getString("usu_tipo").equals("administrador")) {
                 if (esc == null) {
                     esc = new FormAcionamento();
                     esc.setResizable(true);
@@ -2202,12 +2198,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
                     esc.setVisible(true);
                     esc.setResizable(true);
                 }
-            } else {
-                JOptionPane.showMessageDialog(this, "Acesso somente para o Administrador, contate o administrador!");
-            }
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(this, "Acesso somente para o Administrador, contate o administrador!!\n Erro: " + ex);
-        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
